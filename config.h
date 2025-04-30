@@ -5,7 +5,7 @@
 #define _GNU_SOURCE /* Always use GNU extensions. */
 #endif
 #define CCAN_COMPILER "cc"
-#define CCAN_CFLAGS "-g3 -ggdb -Wall -Wstrict-prototypes -Wold-style-definition -Wundef -Wmissing-prototypes -Wmissing-declarations -Wpointer-arith -Wwrite-strings -DCCAN_STR_DEBUG=1 -I."
+#define CCAN_CFLAGS "-g3 -ggdb -Wall -Wstrict-prototypes -Wold-style-definition -Wundef -Wmissing-prototypes -Wmissing-declarations -Wpointer-arith -Wwrite-strings -Wshadow=local -DCCAN_STR_DEBUG=1 -I."
 #define CCAN_OUTPUT_EXE_CFLAG "-o"
 
 #define HAVE_CCAN 1
@@ -16,6 +16,7 @@
 #define HAVE_ATTRIBUTE_CONST 1
 #define HAVE_ATTRIBUTE_DEPRECATED 0
 #define HAVE_ATTRIBUTE_NONNULL 1
+#define HAVE_ATTRIBUTE_RETURNS_NONNULL 1
 #define HAVE_ATTRIBUTE_SENTINEL 1
 #define HAVE_ATTRIBUTE_PURE 1
 #define HAVE_ATTRIBUTE_MAY_ALIAS 1
@@ -74,6 +75,10 @@
 #define HAVE_OPENMP 1
 #define HAVE_VALGRIND_MEMCHECK_H 0
 #define HAVE_UCONTEXT 1
-#define HAVE_POINTER_SAFE_MAKECONTEXT 0
+#define HAVE_POINTER_SAFE_MAKECONTEXT 1
 #define HAVE_BUILTIN_CPU_SUPPORTS 1
+#define HAVE_CLOSEFROM 1
+#define HAVE_F_CLOSEM 0
+#define HAVE_NR_CLOSE_RANGE 1
+#define HAVE_F_MAXFD 0
 #endif /* CCAN_CONFIG_H */
